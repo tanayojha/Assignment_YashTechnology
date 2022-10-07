@@ -1,4 +1,4 @@
-package com.yash.SpringJDBC;
+package com.yash.springjdbc;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

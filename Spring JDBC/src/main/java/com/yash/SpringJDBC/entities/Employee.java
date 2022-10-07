@@ -1,4 +1,4 @@
-package com.yash.SpringJDBC.entities;
+package com.yash.springjdbc.entities;
 
 public class Employee {
 	private int id;

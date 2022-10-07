@@ -1,9 +1,9 @@
-package com.yash.SpringJDBC;
+package com.yash.springjdbc;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import com.yash.SpringJDBC.dao.EmployeeDao;
-import com.yash.SpringJDBC.entities.Employee;
+import com.yash.springjdbc.dao.EmployeeDao;
+import com.yash.springjdbc.entities.Employee;
 
 
 public class App 

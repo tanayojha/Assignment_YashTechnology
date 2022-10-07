@@ -1,9 +1,9 @@
-package com.yash.SpringJDBC.dao;
+package com.yash.springjdbc.dao;
 
 import java.util.List;
 
 import org.springframework.jdbc.core.JdbcTemplate;
-import com.yash.SpringJDBC.entities.Employee;
+import com.yash.springjdbc.entities.Employee;
 
 public class EmployeeDaoImpl implements EmployeeDao {
 	

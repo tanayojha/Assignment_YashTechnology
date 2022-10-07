@@ -1,7 +1,7 @@
-package com.yash.SpringJDBC.dao;
+package com.yash.springjdbc.dao;
 
 import java.util.List;
-import com.yash.SpringJDBC.entities.Employee;
+import com.yash.springjdbc.entities.Employee;
 
 public interface EmployeeDao {
 	
