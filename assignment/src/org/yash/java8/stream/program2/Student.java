@@ -12,8 +12,6 @@ public class Student {
 	LocalDateTime date_of_addmission, dob;
 	int maths, physics, chemistry, english, hindi; // marks in subjects
 	String classname;
-	
-	
 
 	public Student(int rollno, LocalDateTime date_of_addmission, LocalDateTime dob, int maths, int physics,
 			int chemistry, int english, int hindi, String classname) {
