@@ -11,7 +11,7 @@ public class App
     public static void main( String[] args )
     {
         //System.out.println( "Hello World!" );
-        ApplicationContext context = new ClassPathXmlApplicationContext("com/yash/SpringJDBC/applicationcontext.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("com/yash/springjdbc/applicationcontext.xml");
         EmployeeDao employeeDao = context.getBean("EmployeeDao",EmployeeDao.class);
         Employee employee = new Employee();
         employee.setId(101);

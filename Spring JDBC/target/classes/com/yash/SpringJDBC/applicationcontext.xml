@@ -5,26 +5,33 @@
 	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
  	http://www.springframework.org/schema/beans/spring-beans.xsd
- 	http://www.springframework.org/schema/context
+ 		http://www.springframework.org/schema/context
 	http://www.springframework.org/schema/context/spring-context.xsd">
-	
-	<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" name="ds">
-		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
-		<property name="url" value="jdbc:mysql://localhost:3306/springjdbcdb"></property>
-		<property name="username" value="root"></property>
-		<property name="password" value="root"></property>
+
+	<bean
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+		name="ds">
+		<property name="driverClassName"
+			value="com.mysql.cj.jdbc.Driver" />
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/springjdbcdb" />
+		<property name="username" value="root" />
+		<property name="password" value="root" />
 	</bean>
 	
-	<bean class="org.springframework.jdbc.core.JdbcTemplate" name="jdbctemp">
+	<bean class="org.springframework.jdbc.core.JdbcTemplate"
+		name="jdbctemp">
 		<property name="dataSource">
-			<ref bean="ds"/>
+			<ref bean="ds" />
 		</property>
 	</bean>
 	
-	<bean class="com.yash.springjdbc.dao.EmployeeDaoImpl" name="EmployeeDao">
+	<bean class="com.yash.springjdbc.dao.EmployeeDaoImpl"
+		name="EmployeeDao">
 		<property name="jdbctemp">
-			<ref bean="jdbctemp"/>
+			<ref bean="jdbctemp" />
 		</property>
 	</bean>
 
 </beans>
+	
