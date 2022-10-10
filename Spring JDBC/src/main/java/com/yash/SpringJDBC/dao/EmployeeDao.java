@@ -4,15 +4,17 @@ import java.util.List;
 import com.yash.springjdbc.entities.Employee;
 
 public interface EmployeeDao {
-	
-	public int insert(Employee employee);
 
-	public int updatedetails(Employee employee);
+	public int insertEmployee(Employee employee);
 
-	public int deletedetails(int stuid);
+	public int updateEmployee(Employee employee);
 
-	public Employee selectDetails(int stuid);
+	public int updateEmployeeName(Employee employee);
 
-	public List<Employee> getAllDetails();
-	
+	public int deleteEmployee(int empId);
+
+	public Employee getEmployeeById(int empId);
+
+	public List<Employee> getAllEmployeeDetails();
+
 }

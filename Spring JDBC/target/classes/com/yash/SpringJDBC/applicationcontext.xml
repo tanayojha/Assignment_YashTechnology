@@ -20,7 +20,7 @@
 	</bean>
 	
 	<bean class="org.springframework.jdbc.core.JdbcTemplate"
-		name="jdbctemp">
+		name="jdbcte">
 		<property name="dataSource">
 			<ref bean="ds" />
 		</property>
@@ -28,8 +28,8 @@
 	
 	<bean class="com.yash.springjdbc.dao.EmployeeDaoImpl"
 		name="EmployeeDao">
-		<property name="jdbctemp">
-			<ref bean="jdbctemp" />
+		<property name="jdbcte">
+			<ref bean="jdbcte" />
 		</property>
 	</bean>
 
