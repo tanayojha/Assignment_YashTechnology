@@ -35,7 +35,7 @@ public class App
         //Delete data from database
         //empDao.delete(emp);
         //Get all employees detail from database
-        //empDao.getAllEmployeeList();
+        empDao.getAllEmployeeList();
         //Get employee detail from empId by database
         empDao.getEmployeeById(emp.getEmpId());
         

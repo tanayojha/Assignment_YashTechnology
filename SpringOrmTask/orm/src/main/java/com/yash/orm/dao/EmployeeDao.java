@@ -2,13 +2,12 @@ package com.yash.orm.dao;
 
 import org.springframework.transaction.annotation.Transactional;
 
+import java.io.Serializable;
 import java.util.List;
-
 import org.springframework.orm.hibernate5.HibernateTemplate;
-
 import com.yash.orm.entities.Employee;
 
-public class EmployeeDao {
+public class EmployeeDao implements Serializable {
 
 	HibernateTemplate hibernateTemplate;
 
@@ -39,12 +38,22 @@ public class EmployeeDao {
 	
 	public Employee getEmployeeById(int empId) {
 		Employee employee = this.hibernateTemplate.get(Employee.class,empId);
+		System.out.println("Employee By Id -> "+employee.toString());
 		return employee;
 	}
 	
 	public List<Employee> getAllEmployeeList(){
-		List<Employee> employeeList = this.hibernateTemplate.loadAll(null);
+		List<Employee> employeeList = this.hibernateTemplate.loadAll(Employee.class);
+		for (Employee employee : employeeList) {
+			System.out.println(employee.toString());
+		}
 		return employeeList;
+	}
+	
+	public void JoinTable() {
+		//SELECT * FROM category c  inner join events e on e.category_i=c.category_id 
+		//where c.parent_category_id=1; the why i need to join parent_category_id
+		
 	}
 	
 }
