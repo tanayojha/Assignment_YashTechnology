@@ -13,16 +13,12 @@ public class MyAspect {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter Secret Password ->");
 		String sp = scan.next();
-		if(sp!=null)
-		{
-				System.out.println("Authentication Done!");
-		}
-		else
-		{
+		if (sp != null) {
+			System.out.println("Authentication Done!");
+		} else {
 			System.out.println("Operation failed");
 		}
 		System.out.println("Payment Started");
 	}
-
 
 }
