@@ -64,4 +64,24 @@ public class TraineeServiceImpl implements TraineeService {
 		return t1;
 	}
 
+	@Override
+	public String deleteAllTrainee() {
+		// TODO Auto-generated method stub
+		
+		List<Trainee> traineeList;
+		try {
+			traineeList = fetchTraineeList();
+			if(traineeList!=null) {
+				repository.deleteAll();
+			}
+			else {
+				System.out.println("No record Found!");
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		return "There is no record in Trainee List!";
+	}
+
 }

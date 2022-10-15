@@ -21,6 +21,9 @@ public interface TraineeService {
     
     //GetTraineeByID
     Optional<Trainee> getTraineeById(int id);
+    
+    //Delete All Trainee
+    String deleteAllTrainee();
       
     
 
