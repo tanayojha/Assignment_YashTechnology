@@ -6,48 +6,48 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.yash.springbootproject.entities.Training;
-import com.yash.springbootproject.repository.TrainingRepository;
-import com.yash.springbootproject.service.TrainingService;
+import com.yash.springbootproject.entities.Project;
+import com.yash.springbootproject.repository.ProjectRepository;
+import com.yash.springbootproject.service.ProjectService;
 
 @Service
-public class TrainingServiceImpl implements TrainingService {
+public class ProjectServiceImpl implements ProjectService {
 	
 	@Autowired
-	TrainingRepository repository;
+	ProjectRepository repository;
 
 	@Override
-	public Training createTraining(Training training) {
+	public Project createProject(Project project) {
 		// TODO Auto-generated method stub
-		return repository.save(training);
+		return repository.save(project);
 	}
 
 	@Override
-	public List<Training> trainingList() {
+	public List<Project> fetchProjectList() {
 		// TODO Auto-generated method stub
 		return repository.findAll();
 	}
 
 	@Override
-	public Training updateTraining(Training training, int id) {
+	public Project updateProject(Project project, int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public String deleteTrainingById(int id) {
+	public String deleteProjectById(int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Optional<Training> getTrainingById(int id) {
+	public Optional<Project> getProjectById(int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public String deleteAllTraining() {
+	public String deleteAllProject() {
 		// TODO Auto-generated method stub
 		return null;
 	}

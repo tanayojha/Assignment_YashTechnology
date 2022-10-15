@@ -52,7 +52,4 @@ public class TraineeController {
 		return "Trainee Record Deleted Done";
 	}
 	
-	
-	
-	
 }
