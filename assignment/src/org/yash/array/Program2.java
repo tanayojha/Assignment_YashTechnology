@@ -19,8 +19,7 @@ public class Program2 {
 			}
 		}
 		System.out.println("count of Duplicate Numbers is: "+ count);
-
-		
+	
 	}
 
 }

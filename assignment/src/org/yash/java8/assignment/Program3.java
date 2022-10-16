@@ -1,4 +1,4 @@
-package org.yash.java8;
+package org.yash.java8.assignment;
 
 import java.util.Arrays;
 import java.util.List;
