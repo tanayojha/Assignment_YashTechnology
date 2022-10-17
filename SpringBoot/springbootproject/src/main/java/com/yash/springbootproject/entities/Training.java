@@ -15,13 +15,10 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 @Table(name = "training")
 public class Training {
 
-	@OneToMany(mappedBy = "training")
-	@JsonManagedReference
-	private List<Trainee> traineeList;
-
+	
 	@Id
-	@Column(name = "training_Id")
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private int trainingId;
 
 	@Column(name = "training_name")
@@ -38,6 +35,11 @@ public class Training {
 
 	@Column(name = "training_strength")
 	private int trainingStrength;
+	
+	@OneToMany(mappedBy = "training")
+	//@JsonManagedReference
+	private List<Trainee> traineeList;
+
 
 	public List<Trainee> getTraineeList() {
 		return traineeList;

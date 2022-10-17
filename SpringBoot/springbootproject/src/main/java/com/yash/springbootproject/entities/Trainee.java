@@ -1,25 +1,26 @@
 package com.yash.springbootproject.entities;
 
 import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 @Table(name = "trainee")
 public class Trainee {
-	
+
 	@Id
-	@Column(name = "trainee_id")
+	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int traineeId;
 
@@ -32,18 +33,13 @@ public class Trainee {
 	@Column(name = "trainee_status")
 	private boolean traineeStatus;
 
-	//------------------
-	
 	@ManyToOne()
 	@JoinColumn(name = "trainee_training_id")
-	@JsonBackReference
+	//@JsonBackReference
 	private Training training;
-	
-	@ManyToMany()
-	@JsonBackReference
-	private List<Project> projectList;
 
-	//---------------------
+	@ManyToMany(targetEntity = Project.class, cascade = {CascadeType.ALL})
+	private List<Project> projectList;
 
 	public List<Project> getProjectList() {
 		return projectList;

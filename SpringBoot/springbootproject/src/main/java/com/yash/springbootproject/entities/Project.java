@@ -1,13 +1,9 @@
 package com.yash.springbootproject.entities;
 
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
 import javax.persistence.Table;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 @Table(name = "project")
@@ -20,17 +16,19 @@ public class Project {
 	@Column(name = "project_name")
 	private String projectName;
 
-	@ManyToMany(mappedBy = "projectList")
-	@JsonManagedReference
-	private List<Trainee> traineeList;
-
-	public List<Trainee> getTraineeList() {
-		return traineeList;
-	}
-
-	public void setTraineeList(List<Trainee> traineeList) {
+	/*
+	 * @ManyToMany(mappedBy = "projectList")
+	 * 
+	 * @JsonManagedReference private List<Trainee> traineeList;
+	 * 
+	 * public List<Trainee> getTraineeList() { return traineeList; }
+	 * 
+	 * public void setTraineeList(List<Trainee> traineeList) {
 		this.traineeList = traineeList;
-	}
+	   }
+	 */
+
+	
 
 	public int getProjectId() {
 		return projectId;

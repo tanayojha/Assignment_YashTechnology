@@ -5,6 +5,8 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.yash.springbootproject.entities.Trainee;
 import com.yash.springbootproject.repository.TraineeRepository;
 import com.yash.springbootproject.service.TraineeService;
@@ -16,6 +18,7 @@ public class TraineeServiceImpl implements TraineeService {
 	TraineeRepository repository;
 
 	@Override
+	@Transactional
 	public Trainee insertTrainee(Trainee trainee) {
 		// TODO Auto-generated method stub
 		return repository.save(trainee);
