@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.LongSummaryStatistics;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
@@ -20,7 +21,18 @@ import java.util.stream.Collectors;
 public class Program1 {
 
 	public static void main(String[] args) {
-		int[] numbers = {5, 9, 11, 2, 8, 21, 1};
+		int[] numbers = {5, 9, 11, 2, 8, 21, 1,1};
+		
+		List<Integer> asList2 = Arrays.asList(5, 9, 11, 2, 8, 21, 1,1);
+		
+		asList2.stream()
+		.collect(Collectors.groupingBy(Function.identity(),Collectors.counting()))
+		.entrySet()
+		.stream()
+		.filter(m -> m.getValue() > 1)
+		.map(Map.Entry::getKey)
+		.collect(Collectors.toSet());
+		
         System.out.println("Original Integer List - " + numbers + "\n");
         
       // calculate sum
@@ -85,7 +97,6 @@ public class Program1 {
         
         // local variables
         Map.Entry<Integer, String> firstEntry = null, lastEntry = null;
- 
  
         // create HashMap object
         Map<Integer, String> companies = new HashMap<>();

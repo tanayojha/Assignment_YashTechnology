@@ -15,7 +15,6 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 @Table(name = "training")
 public class Training {
 
-	
 	@Id
 	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
