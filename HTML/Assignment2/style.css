@@ -1,0 +1,94 @@
+@charset "ISO-8859-1";
+
+body {
+	font-family: Arial;
+	margin: 0;
+	height: 100%;
+	background-color: #D5F5E3;
+}
+
+.div1 {
+	padding-top: 5px; padding-left : 5px;
+	margin-top: 20px;
+	margin-left: 20px;
+	display: block;
+	position: relative;
+	background-image: url('C:/Users/Tanay.ojha/Pictures/background.jpg');
+	width: 350px;
+	display: block;
+	position: relative;
+	background-image: url('C:/Users/Tanay.ojha/Pictures/background.jpg');
+	width: 350px;
+	height: 350px;
+	padding-left: 5px;
+}
+
+.one {
+	position: absolute;
+	background-color: #eddd9e;
+	width: 250px;
+	height: 80px;
+	border-radius: 20px 0px 0px 0px;
+	border: 1px solid brown;
+	left: 50%;
+	top: 40%;
+	transform: translate(-50%, -50%);
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+	line-height: 20px;
+}
+
+.two {
+	position: absolute;
+	background-color: #eddd9e;
+	width: 250px;
+	height: 80px;
+	border-radius: 20px 0px 0px 0px;
+	border: 1px solid brown;
+	left: 50%;
+	top: 80%;
+	transform: translate(-50%, -50%);
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+	line-height: 20px;
+}
+
+.first {
+	position: absolute;
+	background-color: #eddd9e;
+	width: 250px;
+	height: 80px;
+	border-radius: 20px 0px 0px 0px;
+	border: 1px solid brown;
+	left: 50%;
+	top: 40%;
+	transform: translate(-50%, -50%);
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+	line-height: 20px;
+}
+
+.second {
+	position: absolute;
+	background-color: #eddd9e;
+	width: 250px;
+	height: 80px;
+	border-radius: 0px 0px 0px 20px;
+	border: 1px solid brown;
+	left: 50%;
+	top: 80%;
+	transform: translate(-50%, -50%);
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+	line-height: 20px;
+	
+	box-shadow: grey 5.95px 5.95px 2.6px;
+}
