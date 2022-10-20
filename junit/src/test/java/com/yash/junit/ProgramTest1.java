@@ -1,8 +1,12 @@
 package com.yash.junit;
 
 import static org.junit.Assert.assertEquals;
-import org.junit.Test;
-import junit.framework.Assert;
+
+/**
+ * 
+ * @author tanay.ojha
+ *
+ */
 
 public class ProgramTest1 {
 	  Program1 con = new Program1();
