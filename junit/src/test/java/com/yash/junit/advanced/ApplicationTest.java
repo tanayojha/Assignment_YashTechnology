@@ -5,8 +5,6 @@ package com.yash.junit.advanced;
 
 import static org.junit.Assert.assertEquals;
 
-import java.util.ArrayList;
-
 import org.junit.Before;
 import org.junit.Test;
 
@@ -17,22 +15,21 @@ import org.junit.Test;
 public class ApplicationTest {
 	
 	ApplicationService service;
+	Application app;
 
 	/**
 	 * @throws java.lang.Exception
 	 */
 	@Before
 	public void setUp() throws Exception {
+		app = new Application();
 		service = new ApplicationService();
 	}
 
-	@Test
-	public void test() {
-		ArrayList<Application> arrayList = new ArrayList<Application>();
-		arrayList.add(new Application("101", "Nexus"));
-		arrayList.add(new Application("102", "Meta"));
-		Application[]app = (Application[]) arrayList.toArray();
-		assertEquals(2, service.addApplication(app));
-	}
+	 @Test
+	    public void testAddApplication1(){  
+		 	//Application[]app = ;
+	        assertEquals("Application [appId=101, appName=Nexus]",service.addApplication(new Application[] {new Application("101","Nexus")})); 
+	    }
 
 }
