@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>OTBS</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+</head>
+
+
+
+<body>
+
+	<div class="container my-2">
+		<h1>Movies List</h1>
+
+		<a th:href="@{/addmovie}" class="btn btn-primary btn-sm mb-3"> Add Movies </a>
+
+		<table border="1" class="table table-striped table-responsive-md">
+			<thead>
+				<tr>
+					<th>Movie Name</th>
+					<th>Description</th>
+					<th>Duration</th>
+					<th>Release Date</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="movie : ${movie}">
+					<td th:text="${movie.moviename}"></td>
+					<td th:text="${movie.description}"></td>
+					<td th:text="${movie.duration}"></td>
+					<td th:text="${movie.releasedate}"></td>
+					<td><a th:href="@{/edit/{id}(id=${movie.id})}" class="btn btn-primary">Update</a>&nbsp;
+                    <a class="btn btn-primary" >Delete</a>
+                    </td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<center><p th:text="${msg}"></p> 
+</center>
+</body>
+
+</html>

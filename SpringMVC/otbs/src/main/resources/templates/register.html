@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>OTBS</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+
+<body>
+	<div class="container my-3">
+		<div class="row">
+			<div class="col-md-8 mx-auto">
+				<br>
+				<h2>User Registration</h2>
+				<br>
+				<form action="register" method="post" name="registration" class="registartion-form"
+					onsubmit="return formValidation()">
+					<div class="form-row">
+						<div class="col-md-6 form-group">
+							<label>First Name</label>
+							<input type="text" class="form-control" name="firstname" placeholder="Enter First Name eg: Rahul"
+								minlength="3" maxlength="32" pattern="[A-Za-z]+" required>
+						</div>
+						<div class="col-md-6 form-group">
+							<label>Last Name</label>
+							<input type="text" class="form-control" name="lastname" placeholder="Enter Last Name eg: Gupta"
+								minlength="3" maxlength="32" pattern="[A-Za-z]+" required>
+						</div>
+						<div class="col-md-6 form-group">
+							<label>Username</label>
+							<input type="text" class="form-control" name="username" placeholder="Enter Username"
+								required>
+						</div>
+						<div class="col-md-6 form-group">
+							<label>Mobile Number</label>
+							<input type="tel" class="form-control" maxlength="10" name="mobilenumber"
+								placeholder="Enter Mobile Number eg: 9876543210" pattern="[0-9]{10}" required>
+						</div>
+						<div class="col-md-6 form-group">
+							<label>Password</label>
+							<input type="password" class="form-control" name="password" placeholder="Enter Password"
+								required>
+						</div>
+						<div class="col-md-6 form-group">
+							<label>Retype Password</label>
+							<input type="password" step="any" class="form-control" name="retypepassword"
+								placeholder="Enter Retype Password" required>
+						</div>
+					</div>
+					<div><input type="submit" class="submit" value="Register" /></div>
+					<!--<button type="submit" class="btn btn-primary btn-block mt-3">Register</button>-->
+				</form>
+			</div>
+		</div>
+	</div>
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ <script>
+    $(function() {
+        $("#join_datepicker").datepicker({dateFormat:"yy-mm-dd"});
+        $("#retire_datepicker").datepicker({dateFormat:"yy-mm-dd"});
+    });
+</script>-->
+</body>
+
+</html>

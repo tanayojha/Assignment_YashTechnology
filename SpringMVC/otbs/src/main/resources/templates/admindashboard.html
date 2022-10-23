@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>OTBS Admin Dashboard</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+	a {
+		background-color: aqua;
+		margin-top: 15px;
+	}
+
+	nav {
+		height: 10%;
+	}
+
+	.row {
+		width: 220%;
+	}
+
+	.span {
+		color: crimson;
+	}
+</style>
+
+<body style="background-color: white;">
+	<nav class="navbar navbar-inverse navbar-fixed-top" id="nav" style="background-color: lightgrey;">
+		<div class="container">
+			<div class="navbar-header">
+				<div class="row">
+					<div class="col-md-4">
+						<h3
+							style="color: black; font-weight: bold; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+							Welcome <span th:text="Admin"></span> </h3>
+					</div>
+
+					<div class="col-md-4" style="float: right;">
+						<a class="btn btn-primary" href="userlist">Users List</a>&nbsp;&nbsp;
+						<a class="btn btn-primary" href="movielist">Movies List</a>&nbsp;&nbsp;
+						<a class="btn btn-primary" href="backtologin">Logout</a>
+					</div>
+				</div>
+
+
+
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+
+
+</body>
+
+</html>
