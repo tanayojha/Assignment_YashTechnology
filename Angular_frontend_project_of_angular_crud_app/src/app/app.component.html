@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-sm bg-primary nav-dark">
+    <ul class="navbar-nav">
+        <li class="nav-item"></li>
+        <a routerLink="employees" routerLinkActive="active" class="nav-link">Employee List</a>
+        <li class="nav-item"></li>
+        <a routerLink="create-employee" routerLinkActive="active" class="nav-link">Add Employee</a>
+    </ul>
+</nav>
+
+<h1 class="text-center">{{title}}</h1>
+<div class="container">
+    <!-- <app-employee-list></app-employee-list> before routing we are using this to display list-->
+    <router-outlet></router-outlet><!-- For using using routing add router tag-->
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <span>All Rights Reserved 2020 @yash</span>
+    </div>
+</footer>
